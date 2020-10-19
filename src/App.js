@@ -5,6 +5,7 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Landing from './pages/landing'
 import SignUp from './pages/signup'
+import Dashboard from './pages/dashboard'
 
 import {
   BrowserRouter as Router,
@@ -18,6 +19,9 @@ function App() {
     <div>
       <Switch>
 
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
 
         <Route path="/signup">
           <SignUp />
