@@ -4,6 +4,7 @@ import { Button, Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/logo.png'
+import landing from '../assets/landing.png'
 
 
 class Landing extends React.Component {
@@ -18,7 +19,7 @@ class Landing extends React.Component {
             src={logo}
             height="50"
             className="d-inline-block align-top"
-          />{' '}
+          />
         </Navbar.Brand>
         <Nav className="ml-auto">
           <Nav.Link href="#home">Why Incremento?</Nav.Link>
@@ -29,39 +30,33 @@ class Landing extends React.Component {
         </Nav>
       </Navbar>
 
-
-
-
-
-      <div style={{ display: "flex", minHeight: "45%", width: "30%", minWidth: "200px", 
-                    border: "3px solid #7F8C8D", borderRadius: "5px", alignSelf: 'center', backgroundColor: '#A6ACAF'}}>
-        <Container style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+      <Row style={{ marginTop: "4em" }}>
+        <Col className="ml-3 mt-3"  style={{ height: "50vh", fontSize: "20px"  }}>
           <Row>
-            <Col>
-              <h3>Omerte</h3>
-              <Form>
-                
-                <Form.Group controlId="exampleForm.ControlInput1">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="name@example.com" />
-                </Form.Group>
-
-                <Form.Group controlId="exampleForm.ControlInput1">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="name@example.com" />
-                </Form.Group>
-              </Form>
+            <Col md={{ span: 8, offset: 2 }}>
+              <div>       
+                <p><b>Signup for all of these great reasons</b></p>
+                <p>Reason1</p>
+                <p>Reason1</p>
+                <p>Reason1</p>
+                <div className="text-center">
+                  <Button>
+                    <b>Sign up</b>
+                  </Button>
+                </div>                
+              </div>
             </Col>
           </Row>
-          <Row>
-            <Col style={{ textAlign: 'right'}}>
-              <Button>Login</Button>
-            </Col>
-          </Row>
-        </Container>
-
-      </div>    
-
+        </Col>
+        <Col style={{ height: 50 }}>
+        <img
+            alt=""
+            src={landing}
+            
+            className="d-inline-block align-top"
+          />
+        </Col>
+      </Row>
     </div>);
   }
 }
