@@ -5,7 +5,11 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Landing from './pages/landing'
 import SignUp from './pages/signup'
-import Dashboard from './pages/dashboard'
+//import Dashboard from './pages/dashboard'
+
+import Dashboard from './base/dashboard'
+
+import Team from './pages/team'
 
 import {
   BrowserRouter as Router,
@@ -21,6 +25,10 @@ function App() {
 
         <Route path="/dashboard">
           <Dashboard />
+        </Route>
+
+        <Route path="/team">
+          <Team />
         </Route>
 
         <Route path="/signup">

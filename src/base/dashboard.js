@@ -1,22 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Button, Container, Row, Col } from 'react-bootstrap';
-import { Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
-import logo from '../assets/logo.png'
-import team from '../assets/team.png'
+
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTasks, faCog, faQuestion, faColumns, faCommentAlt } from '@fortawesome/free-solid-svg-icons'
 
-import './styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './dashboard.css'
 
+import logo from '../assets/logo.png'
 
 class Dashboard extends React.Component {
 
   constructor(props){
     super(props)
+    this.props = props;
     this.state = {
       project_list: false
     }
@@ -37,7 +39,7 @@ class Dashboard extends React.Component {
     return (
       <Container fluid>
         <Row>
-          <Col md={2} style={{backgroundColor: "#180430", height: '100vh'}}>
+          <Col xs={2} style={{backgroundColor: "#180430", height: '100vh'}}>
           
             <img alt="" src={logo} className="mt-3 d-inline-block align-top" style={{ width: "100%"}} />
 
@@ -75,14 +77,9 @@ class Dashboard extends React.Component {
               </ul>
 
             </div>
-
-
-
           </Col>
           
-          <Col md={10} style={{ backgroundColor: "#EEEEEE", padding: 0, display: 'flex', flexDirection: 'column'}}>
-
-
+          <Col xs={10} style={{ backgroundColor: "#EEEEEE", padding: 0, display: 'flex', flexDirection: 'column'}}>
             <Navbar style={{ backgroundColor: "#999999", color: 'yellow' }}>
               <Nav className="ml-auto">
                 <Nav.Link href="#home">test@testdomain.com</Nav.Link>
@@ -99,34 +96,8 @@ class Dashboard extends React.Component {
             </Navbar>
 
             <div className="m-3" style={{ backgroundColor: '#EEEEEE', display: 'flex', flexDirection: 'column', flexGrow: '1' }}>
-            
-              <div className="text-center" style={{ border: "3px solid orange", borderRadius: "5px", color: 'orange', paddingTop: '1em', paddingBottom: '1em' }}>
-                Confirm email address
-              </div>
-
-              <div className="mt-3" style={{ backgroundColor: 'white', color: 'grey', flexGrow: 2 }}>
-
-                <div className="text-center pt-3"> 
-                  <p>You have no active teams. Create one or get a team admin to invite you.</p>
-                </div>
-
-                <div className="text-center">
-                  <Button  variant="outline-light" style={{ color: 'grey', borderColor: 'grey' }}>
-                    <b>Create a team</b>
-                  </Button>
-                </div>
-
-                <div className="text-center">
-                  <img alt="" src={team} className="mt-3 d-inline-block align-top" style={{ width: "50%"}} />
-                </div>
-
-
-              </div>
-
-
+                {this.props.children}
             </div>
-
-
           </Col>
 
         </Row>
