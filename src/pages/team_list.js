@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import './styles.css'
+//import './styles.css'
 
 import team from '../assets/team.png'
 import Dasboard from '../base/dashboard/dashboard'

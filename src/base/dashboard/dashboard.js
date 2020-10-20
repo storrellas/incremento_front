@@ -51,19 +51,19 @@ class Dashboard extends React.Component {
                 <li className="list-group-item" style={{ paddingLeft: 0, paddingRight: 0, backgroundColor: 'transparent' }} onClick={(e) => this.hideMenu(e)}>
                   <button className="menu" href="#">
                     <FontAwesomeIcon className="mr-2" icon={faCommentAlt} /><span>Report</span>
-
-                      <ul className={submenu_classes} style={{ fontSize: '15px', padding: 0 }}>
-                        <li className="list-group-item menu" style={{ backgroundColor: 'transparent' }} >
-                          <button className="menu" href="#">Dashboard</button>
-                        </li>
-                        <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                          <button className="menu" href="#">Project</button>
-                        </li>
-                        <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                          <button className="menu" href="#">Report</button>
-                        </li>
-                      </ul>
                   </button>
+                  <ul className={submenu_classes} style={{ fontSize: '15px', padding: 0 }}>
+                    <li className="list-group-item menu" style={{ backgroundColor: 'transparent' }} >
+                      <button className="menu" href="#">Dashboard</button>
+                    </li>
+                    <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
+                      <button className="menu" href="#">Project</button>
+                    </li>
+                    <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
+                      <button className="menu" href="#">Report</button>
+                    </li>
+                  </ul>
+                  
                 </li>
               </ul>
 

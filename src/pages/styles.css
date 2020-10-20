@@ -1,29 +1,11 @@
-.menu {
-    color: #90C8E1;
-    background: transparent;
-    border: 0;
-    text-align: left;
-}
-
-.menu:focus{
-    border: 0;
-    outline: 0;
-}
-.menu:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.submenu {
-    overflow-y: hidden;
-    overflow-x: initial;
+.react-chip{
     max-height: 200px;
-    transition: max-height 1s ease-in-out;
+    height: 200px;
+    overflow-y: scroll;
 }
-
-.submenu-hidden {
-    max-height: 0;
-    transition: max-height 1s ease-in-out;
+html{
+    --react-chip-input__chip-bg-color: #180430;
+    --react-chip-input__chip-hover-bg-color: grey;
 }
 
 
