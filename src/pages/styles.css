@@ -11,12 +11,12 @@
     overflow-y: hidden;
     overflow-x: initial;
     max-height: 200px;
-    transition: max-height 2s ease-in-out;
+    transition: max-height 1s ease-in-out;
 }
 
 .submenu-hidden {
     max-height: 0;
-    transition: max-height 2s ease-in-out;
+    transition: max-height 1s ease-in-out;
 }
 
 .menu-visible {
