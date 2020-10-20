@@ -32,6 +32,8 @@ class Dashboard extends React.Component {
 
     const transition_menu = this.state.project_list;
 
+    const submenu_classes = (transition_menu?"":"submenu-hidden") + "submenu list-group"
+
     return (
       <Container fluid>
         <Row>
@@ -57,9 +59,8 @@ class Dashboard extends React.Component {
                   <a className="menu" href="#">
                     <FontAwesomeIcon className="mr-2" icon={faCommentAlt} /><span>Report</span>
 
-
-                      <ul className={transition_menu?"list-group menu-visible":"list-group menu-hidden"} style={{ fontSize: '15px' }}>
-                        <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
+                      <ul className={transition_menu?"menu-visible":"list-group menu-hidden"} style={{ fontSize: '15px', padding: 0 }}>
+                        <li className="list-group-item menu" style={{ backgroundColor: 'transparent' }} >
                           <a className="menu" href="#">Dashboard</a>
                         </li>
                         <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
@@ -69,7 +70,6 @@ class Dashboard extends React.Component {
                           <a className="menu" href="#">Report</a>
                         </li>
                       </ul>
-
                   </a>
                 </li>
               </ul>
