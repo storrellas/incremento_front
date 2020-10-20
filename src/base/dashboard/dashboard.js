@@ -12,7 +12,7 @@ import { faTasks, faCog, faQuestion, faColumns, faCommentAlt } from '@fortawesom
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './dashboard.css'
 
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 
 class Dashboard extends React.Component {
 

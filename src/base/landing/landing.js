@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom';
 import { Button, Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../assets/logo.png'
-import landing from '../assets/landing.png'
+import logo from '../../assets/logo.png'
+import landing from '../../assets/landing.png'
 
 
 class Landing extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.props = props;
+  }
+
   render() {
     return (
-    <div>
+    <Container fluid  style={{ padding: 0 }}>
 
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">
@@ -31,33 +37,9 @@ class Landing extends React.Component {
       </Navbar>
 
       <Row style={{ marginTop: "4em" }}>
-        <Col className="ml-3 mt-3"  style={{ height: "50vh", fontSize: "20px"  }}>
-          <Row>
-            <Col md={{ span: 8, offset: 2 }}>
-              <div>       
-                <p><b>Signup for all of these great reasons</b></p>
-                <p>Reason1</p>
-                <p>Reason1</p>
-                <p>Reason1</p>
-                <div className="text-center">
-                  <Button>
-                    <b>Sign up</b>
-                  </Button>
-                </div>                
-              </div>
-            </Col>
-          </Row>
-        </Col>
-        <Col style={{ height: 50 }}>
-        <img
-            alt=""
-            src={landing}
-            
-            className="d-inline-block align-top"
-          />
-        </Col>
+        { this.props.children }
       </Row>
-    </div>);
+    </Container>);
   }
 }
 
