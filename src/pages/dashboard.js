@@ -57,8 +57,8 @@ class Dashboard extends React.Component {
                   <a className="menu" href="#">
                     <FontAwesomeIcon className="mr-2" icon={faCommentAlt} /><span>Report</span>
 
-                    <div className={transition_menu?"list-group menu-visible":"list-group menu-hidden"}>
-                      <ul  style={{ fontSize: '15px' }}>
+
+                      <ul className={transition_menu?"list-group menu-visible":"list-group menu-hidden"} style={{ fontSize: '15px' }}>
                         <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
                           <a className="menu" href="#">Dashboard</a>
                         </li>
@@ -69,7 +69,7 @@ class Dashboard extends React.Component {
                           <a className="menu" href="#">Report</a>
                         </li>
                       </ul>
-                    </div>
+
                   </a>
                 </li>
               </ul>

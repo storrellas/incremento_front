@@ -8,19 +8,20 @@
 }
 
 .menu-visible {
-    overflow: hidden;
-    /* visibility: visible;
-    opacity: 1; */
+    overflow: visible;
     max-height: 100vh;
-    transition: max-height 2s linear;
+    transition: max-height 2s 0s, overflow 2s 0s ease-in-out;
 }
 
 .menu-hidden {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 2s linear;
-    /* visibility: hidden;
-    opacity: 0; */
-    /* transition: visibility 0s 1s, opacity 1s linear; */
+    transition: max-height 2s 0s, overflow 2s 0s ease-in-out;
+    animation: 3s delay-overflow;
+
 }
 
+
+@keyframes delay-overflow {
+    from { overflow: visible; }
+}
