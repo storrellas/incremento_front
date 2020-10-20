@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Navbar, Nav } from 'react-bootstrap';
-
-
-
+// Fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTasks, faCog, faQuestion, faColumns, faCommentAlt } from '@fortawesome/free-solid-svg-icons'
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+// Styles
 import './dashboard.css'
-
+// Assets
 import logo from '../../assets/logo.png'
 
 class Dashboard extends React.Component {
@@ -25,16 +22,11 @@ class Dashboard extends React.Component {
   }
 
   hideMenu(e){
-    console.log("Hide Menu")
     this.setState({project_list: !this.state.project_list})
   }
 
   render() {
-    console.log("Render ", this.state.project_list)
-
-    const transition_menu = this.state.project_list;
-
-    const submenu_classes = (transition_menu?"":"submenu-hidden ") + " submenu list-group"
+    const submenu_classes = (this.state.project_list?"":"submenu-hidden ") + " submenu list-group"
 
     return (
       <Container fluid>
@@ -43,36 +35,35 @@ class Dashboard extends React.Component {
           
             <img alt="" src={logo} className="mt-3 d-inline-block align-top" style={{ width: "100%"}} />
 
-
             <div style={{ marginTop: '2em', fontSize: '20px' }}>
 
               <ul className="list-group">
-                <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                  <a className="menu" href="#">
+                <li className="list-group-item" style={{ paddingLeft: 0, paddingRight: 0, backgroundColor: 'transparent' }} >
+                  <button className="menu" href="#">
                     <FontAwesomeIcon className="mr-2" icon={faColumns} /><span>Dashboard</span>
-                  </a>
+                  </button>
                 </li>
-                <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                  <a className="menu" href="#">
+                <li className="list-group-item" style={{ paddingLeft: 0, paddingRight: 0, backgroundColor: 'transparent' }} >
+                  <button className="menu" href="#">
                     <FontAwesomeIcon className="mr-2" icon={faTasks} /><span>Project</span>
-                  </a>
+                  </button>
                 </li>
-                <li className="list-group-item" style={{ backgroundColor: 'transparent' }} onClick={(e) => this.hideMenu(e)}>
-                  <a className="menu" href="#">
+                <li className="list-group-item" style={{ paddingLeft: 0, paddingRight: 0, backgroundColor: 'transparent' }} onClick={(e) => this.hideMenu(e)}>
+                  <button className="menu" href="#">
                     <FontAwesomeIcon className="mr-2" icon={faCommentAlt} /><span>Report</span>
 
                       <ul className={submenu_classes} style={{ fontSize: '15px', padding: 0 }}>
                         <li className="list-group-item menu" style={{ backgroundColor: 'transparent' }} >
-                          <a className="menu" href="#">Dashboard</a>
+                          <button className="menu" href="#">Dashboard</button>
                         </li>
                         <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                          <a className="menu" href="#">Project</a>
+                          <button className="menu" href="#">Project</button>
                         </li>
                         <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                          <a className="menu" href="#">Report</a>
+                          <button className="menu" href="#">Report</button>
                         </li>
                       </ul>
-                  </a>
+                  </button>
                 </li>
               </ul>
 

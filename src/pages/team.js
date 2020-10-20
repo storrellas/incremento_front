@@ -1,42 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import { Button, Container, Row, Col } from 'react-bootstrap';
-import { Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import logo from '../assets/logo.png'
-import team from '../assets/team.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTasks, faCog, faQuestion, faColumns, faCommentAlt } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.css'
 
+import team from '../assets/team.png'
 import Dasboard from '../base/dashboard/dashboard'
 
-
-
 class Team extends React.Component {
-
-  constructor(props){
-    super(props)
-    this.state = {
-      project_list: false
-    }
-  }
-
-  hideMenu(e){
-    console.log("Hide Menu")
-    this.setState({project_list: !this.state.project_list})
-  }
-
   render() {
-    console.log("Render ", this.state.project_list)
-
-    const transition_menu = this.state.project_list;
-
-    const submenu_classes = (transition_menu?"":"submenu-hidden ") + " submenu list-group"
-
     return (
       <Dasboard>            
         <div className="text-center" style={{ border: "3px solid orange", borderRadius: "5px", color: 'orange', paddingTop: '1em', paddingBottom: '1em' }}>
