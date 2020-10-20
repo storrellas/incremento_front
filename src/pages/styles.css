@@ -8,14 +8,19 @@
 }
 
 .menu-visible {
-    visibility: visible;
-    opacity: 1;
-    /* transition: opacity 1s linear; */
+    overflow: hidden;
+    /* visibility: visible;
+    opacity: 1; */
+    max-height: 100vh;
+    transition: max-height 2s linear;
 }
 
 .menu-hidden {
-    visibility: hidden;
-    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 2s linear;
+    /* visibility: hidden;
+    opacity: 0; */
     /* transition: visibility 0s 1s, opacity 1s linear; */
 }
 
