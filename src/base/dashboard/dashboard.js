@@ -28,6 +28,7 @@ class Dashboard extends React.Component {
   render() {
     const submenu_classes = (this.state.project_list?"":"submenu-hidden ") + " submenu list-group"
 
+
     return (
       <Container fluid>
         <Row>
@@ -54,13 +55,19 @@ class Dashboard extends React.Component {
                   </button>
                   <ul className={submenu_classes} style={{ fontSize: '15px', padding: 0 }}>
                     <li className="list-group-item menu" style={{ backgroundColor: 'transparent' }} >
-                      <button className="menu" href="#">Dashboard</button>
+                      <button className="menu" href="#">Home</button>
+                    </li>
+                    <li className="list-group-item" style={{ paddingTop: 0, paddingBottom: ".25rem", backgroundColor: 'transparent' }} >
+                      <button className="menu" href="#">Automation</button>
                     </li>
                     <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                      <button className="menu" href="#">Project</button>
+                      <button className="menu" href="#">Reports</button>
                     </li>
                     <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
-                      <button className="menu" href="#">Report</button>
+                      <button className="menu" href="#">Linked Accounts</button>
+                    </li>
+                    <li className="list-group-item" style={{ backgroundColor: 'transparent' }} >
+                      <button className="menu" href="#">Settings</button>
                     </li>
                   </ul>
                   

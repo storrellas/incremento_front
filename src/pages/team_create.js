@@ -34,8 +34,8 @@ class TeamCreate extends React.Component {
   render() {
     return (
       <Dasboard>
-        <Container className="m-3" style={{ background: 'white' }}>
-          <Row className="mt-3">
+        <div className="ml-3 mr-3"  style={{ background: 'white', minHeight: '60vh' }} >
+          <Row className="mt-3 pt-3">
             <Col className="text-center">
               <h2>Create a Team</h2>
             </Col>
@@ -62,8 +62,7 @@ class TeamCreate extends React.Component {
           <Row className="mt-3" style={{display: 'flex', justifyContent: 'center'}}>
                     <Button type="submit">Create Team</Button>
           </Row>
-          
-        </Container>
+        </div>
       </Dasboard>
     );
   }
