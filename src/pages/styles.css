@@ -10,11 +10,12 @@
 .menu-visible {
     visibility: visible;
     opacity: 1;
-    transition: opacity 1s linear;
+    /* transition: opacity 1s linear; */
 }
 
 .menu-hidden {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s 1s, opacity 1s linear;
+    /* transition: visibility 0s 1s, opacity 1s linear; */
 }
+
