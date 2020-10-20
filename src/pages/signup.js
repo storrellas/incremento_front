@@ -10,8 +10,6 @@ class SignUp extends React.Component {
   render() {
     return (
     <Landing>
-
-
       <Row>
         <Col className="mt-3 " md={{ span: 6, offset: 3 }}>
         <h2 className="text-center">Sign Up for Incremento</h2>

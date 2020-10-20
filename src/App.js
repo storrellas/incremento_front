@@ -7,7 +7,8 @@ import Dashboard from './base/dashboard/dashboard'
 import Landing from './base/landing/landing'
 
 import Home from './pages/home'
-import Team from './pages/team'
+import TeamList from './pages/team_list'
+import TeamCreate from './pages/team_create'
 import SignUp from './pages/signup'
 import Login from './pages/login'
 
@@ -26,10 +27,13 @@ function App() {
           <Landing />
         </Route>
 
-
+        <Route path="/team/create">
+          <TeamCreate />
+        </Route>        
         <Route path="/team">
-          <Team />
+          <TeamList />
         </Route>
+
         <Route path="/home">
           <Home />
         </Route>
