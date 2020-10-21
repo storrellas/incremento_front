@@ -93,7 +93,7 @@ class Dashboard extends React.Component {
               </Nav>
             </Navbar>
 
-            <div style={{ flexGrow: '1' }}>
+            <div className="m-3" style={{ flexGrow: '1' }}>
                 {this.props.children}
             </div>
           </Col>

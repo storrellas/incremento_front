@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Bootstrap
-import { Button, Row, Col, Container } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Project
@@ -34,8 +34,9 @@ class TeamCreate extends React.Component {
   render() {
     return (
       <Dasboard>
-        <div className="ml-3 mr-3"  style={{ background: 'white', minHeight: '60vh' }} >
-          <Row className="mt-3 pt-3">
+        <div className="h-100" style={{ padding: '1em 3em 1em 3em', background: 'white'}} >
+
+          <Row>
             <Col className="text-center">
               <h2>Create a Team</h2>
             </Col>
@@ -58,9 +59,8 @@ class TeamCreate extends React.Component {
                   />
             </Col>
           </Row>
-
           <Row className="mt-3" style={{display: 'flex', justifyContent: 'center'}}>
-                    <Button type="submit">Create Team</Button>
+            <Button type="submit">Create Team</Button>
           </Row>
         </div>
       </Dasboard>
