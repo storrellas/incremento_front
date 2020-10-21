@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import './styles.css'
 
-import team from '../assets/team.png'
+import project from '../assets/project.png'
 import Dasboard from '../base/dashboard/dashboard'
 
-class TeamList extends React.Component {
+class ProjectList extends React.Component {
 
   render() {
     return (
@@ -21,15 +21,16 @@ class TeamList extends React.Component {
 
           <div className="mt-3" style={{ background: 'white', color: 'grey', flexGrow: 2 }}>
             <div className="text-center pt-3">
-              <p>You have no active teams. Create one or get a team admin to invite you.</p>
+              <p>Markagency has no active projects.</p>
+              <p>Create one below to start creating automations</p>
             </div>
             <div className="text-center">
               <Button variant="outline-light" style={{ color: 'grey', borderColor: 'grey' }}>
-                <b>Create a team</b>
+                <b>Create a project</b>
               </Button>
             </div>
             <div className="text-center">
-              <img alt="" src={team} className="mt-3 d-inline-block align-top" style={{ width: "50%" }} />
+              <img alt="" src={project} className="mt-3 d-inline-block align-top" style={{ width: "50%" }} />
             </div>
           </div>
         </div>
@@ -38,4 +39,4 @@ class TeamList extends React.Component {
   }
 }
 
-export default TeamList;
+export default ProjectList;

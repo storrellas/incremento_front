@@ -9,6 +9,7 @@ import Landing from './base/landing/landing'
 import Home from './pages/home'
 import TeamList from './pages/team_list'
 import TeamCreate from './pages/team_create'
+import ProjectList from './pages/project_list'
 import SignUp from './pages/signup'
 import Login from './pages/login'
 
@@ -32,6 +33,10 @@ function App() {
         </Route>        
         <Route path="/team">
           <TeamList />
+        </Route>
+
+        <Route path="/project">
+          <ProjectList />
         </Route>
 
         <Route path="/home">
