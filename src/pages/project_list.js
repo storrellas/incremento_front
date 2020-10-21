@@ -15,8 +15,12 @@ class ProjectList extends React.Component {
       <Dasboard>
         <div className="h-100" style={{ display: 'flex', flexDirection: 'column'}}>
 
-          <div className="text-center" style={{ border: "3px solid orange", borderRadius: "5px", color: 'orange', paddingTop: '1em', paddingBottom: '1em' }}>
-            Confirm email address
+          <div className="p-3" style={{ display: 'flex' }}>
+            <h2>Markagency</h2>
+          </div>
+          
+          <div className="p-3" style={{ background: 'white', color: 'grey', display: 'flex', justifyContent: 'center' }}>
+            <h2>You’re ready to go!</h2>
           </div>
 
           <div className="mt-3" style={{ background: 'white', color: 'grey', flexGrow: 2 }}>
@@ -30,7 +34,7 @@ class ProjectList extends React.Component {
               </Button>
             </div>
             <div className="text-center">
-              <img alt="" src={project} className="mt-3 d-inline-block align-top" style={{ width: "50%" }} />
+              <img alt="" src={project} className="mt-3 d-inline-block align-top" style={{ maxHeight: "30vh", width: 'auto' }} />
             </div>
           </div>
         </div>

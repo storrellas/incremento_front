@@ -29,7 +29,7 @@ class TeamList extends React.Component {
               </Button>
             </div>
             <div className="text-center">
-              <img alt="" src={team} className="mt-3 d-inline-block align-top" style={{ width: "50%" }} />
+              <img alt="" src={team} className="mt-3 d-inline-block align-top" style={{ maxHeight: "50vh", width: 'auto' }} />
             </div>
           </div>
         </div>
