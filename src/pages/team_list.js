@@ -13,7 +13,7 @@ class TeamList extends React.Component {
   render() {
     return (
       <Dasboard>
-        <div className="m-3" style={{ backgroundColor: '#EEEEEE', display: 'flex', flexDirection: 'column'}}>
+        <div className="m-3" style={{ display: 'flex', flexDirection: 'column'}}>
 
           <div className="text-center" style={{ border: "3px solid orange", borderRadius: "5px", color: 'orange', paddingTop: '1em', paddingBottom: '1em' }}>
             Confirm email address
